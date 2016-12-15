@@ -23,6 +23,8 @@ node app.js
 
 You should see a boot message if everything worked and you'd be able to hit a URL like `http://localhost:5858/users`.
 
+![](https://d233zlhvpze22y.cloudfront.net/screenshots/demos/ngrok-demo/server-boot.png)
+
 ```
 curl -v localhost:5858/users
 ```
