@@ -115,7 +115,7 @@ Finally we wanted to send you off with a real world example of how you might use
 We've broken apart the tutorial steps so that this README didn't get prohibitivly (or uninterestingly) long.
 While you don't necessarily need to do the steps in order, the content therein has been written with that assumption.
 
-Check out all the steps here: [https://github.com/bitscooplabs/ngrok-demo/tutorial](https://github.com/bitscooplabs/ngrok-demo/tutorial).
+Check out all the steps here: [https://github.com/bitscooplabs/ngrok-demo/tutorial](https://github.com/bitscooplabs/ngrok-demo/tree/master/tutorial).
 
 Or you can jump to a specific step:
 
