@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "url": "http://localhost:5858",
+
+  "endpoints": {
+    "Posts": {
+      "route": "/posts",
+      "single": {
+        "route": "/posts/{{ identifier }}"
+      }
+    },
+    "Users": {
+      "route": "/users",
+      "single": {
+        "route": "/users/{{ identifier }}"
+      }
+    }
+  }
+}

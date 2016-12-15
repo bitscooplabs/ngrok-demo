@@ -1,0 +1,13 @@
+{
+  "address": "http://localhost:5858",
+
+  "logging": {
+    "severity": "trace",
+    "targets": [
+      {
+        "type": "console",
+        "formatter": "human"
+      }
+    ]
+  }
+}
