@@ -79,6 +79,23 @@ Feel free to peruse the server code, but know that the way in which instance res
 
 ## Get logged into BitScoop
 
-OK, now that you're hopefully rolling with the programs you need, we're going to get started with the code. First you'll need to log into BitScoop at [https://bitscoop.com/login](https://bitscoop.com/login). If you don't yet have an account you can request a signup code at https://bitscoop.com/api-toolbox-beta-request. The wait isn't prohibitive, for the time being we just want to send you an email before you get on our system.
+OK, now that you're hopefully rolling with the programs you need, we're going to *actually* get started. First you'll need to log into BitScoop at [https://bitscoop.com/login](https://bitscoop.com/login). If you don't yet have an account you can request a signup code at https://bitscoop.com/api-toolbox-beta-request. The wait isn't prohibitive, for the time being we just want to send you an email before you get on our system.
 
 Once you're logged in, head to the API Toolbox at [https://developer.bitscoop.com](https://developer.bitscoop.com).
+
+
+## Diving into Provider Maps
+
+Within the BitScoop API Toolbox, a Provider Map is a JSON configuration that controls the interactions with a data provider. We've put together a few steps that we want to take you through to build up a Provider Map that interacts with your local development data provider. Finally we wanted to send you off with a real world example of how you might use BitScoop to power a GitHub application.
+
+We've broken apart the tutorial steps so that this README didn't get prohibitivly (or uninterestingly) long. While you don't necessarily need to do the steps in order, the content therein has been written with that assumption.
+
+Check out all the steps here: [https://github.com/bitscooplabs/ngrok-demo/tutorial](https://github.com/bitscooplabs/ngrok-demo/tutorial).
+
+Or you can jump to a specific step:
+
+  1. [Basic Example](https://github.com/bitscooplabs/ngrok-demo/tutorial/1-basic-example.md)
+  2. [Models for Parsing Data](https://github.com/bitscooplabs/ngrok-demo/tutorial/2-models-for-parsing-data.md)
+  3. [Adding Relations & Hydration](https://github.com/bitscooplabs/ngrok-demo/tutorial/3-adding-relations-and-hydration.md)
+  4. [Handling Basic Authentication](https://github.com/bitscooplabs/ngrok-demo/tutorial/4-handling-basic-authentication.md)
+  5. [Real World Example (GitHub app)](https://github.com/bitscooplabs/ngrok-demo/tutorial/5-real-world-example.md)
