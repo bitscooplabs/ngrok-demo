@@ -105,7 +105,7 @@ The wait isn't prohibitive, for the time being we just want to send you an email
 
 Once you're logged in, head to the API Toolbox at [https://developer.bitscoop.com](https://developer.bitscoop.com).
 
-You'll need an API Key to send requests to the API Toolbox, so go ahead and create one at [https://developer.bitscoop.com/api-keys](https://developer.bitscoop.com/api-keys).
+You'll need an API Key to send requests to the API Toolbox, so go ahead and create one at [https://developer.bitscoop.com/keys](https://developer.bitscoop.com/keys).
 The generated token will need to be added to every request in an authorization header.
 
 ```
