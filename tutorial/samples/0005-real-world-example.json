@@ -1,0 +1,52 @@
+{
+  "version": "1.0",
+  "url": "https://api.github.com",
+
+  "auth": {
+    "type": "oauth2",
+    "redirect_url": "https://www.google.com",
+    "authorization_url": "https://github.com/login/oauth/authorize",
+    "access_token": "https://github.com/login/oauth/access_token",
+    "signature": "parameter",
+    "auth_key": null,
+    "auth_secret": null
+  },
+
+  "meta": {
+    "uniqueness_location": "login",
+    "default_name_location": "login",
+    "endpoint": {
+      "method": "GET",
+      "route": "/user",
+      "model": {
+        "key": "login",
+        "fields": {
+          "login": "string"
+        }
+      }
+    }
+  },
+
+  "endpoints": {
+    "User": {
+      "route": "/user",
+      "single": false,
+      "model": {
+        "key": "name",
+        "fields": {
+          "name": "string",
+          "id": "number",
+          "login": "string"
+        }
+      }
+    },
+    "Repos": {
+      "scopes": [
+        "repo",
+        "repo:status"
+      ],
+      "route": "/user/repos",
+      "single": false
+    }
+  }
+}

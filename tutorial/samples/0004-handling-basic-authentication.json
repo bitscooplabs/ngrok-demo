@@ -1,0 +1,55 @@
+{
+  "version": "1.0",
+  "url": "http://localhost:5858",
+
+  "environment": {
+    "api_key": "12345"
+  },
+
+  "headers": {
+    "Authorization": "Bearer {{ environment.api_key }}",
+    "X-Foo": "Bar"
+  },
+
+  "endpoints": {
+    "Posts": {
+      "route": "/posts",
+      "single": {
+        "route": "/posts/{{ identifier }}"
+      },
+      "model": {
+        "key": "id",
+        "fields": {
+          "id": "integer",
+          "title": "string",
+          "userId": {
+            "type": "integer",
+            "serialized": false
+          },
+          "user": {
+            "type": "related",
+            "ref": "Users",
+            "reverse": {
+              "identifier": "{{ model.userId }}"
+            }
+          }
+        }
+      }
+    },
+    "Users": {
+      "route": "/users",
+      "single": {
+        "route": "/users/{{ identifier }}"
+      },
+      "model": {
+        "key": "id",
+        "fields": {
+          "id": "integer",
+          "name": "string",
+          "username": "string",
+          "email": "email"
+        }
+      }
+    }
+  }
+}
