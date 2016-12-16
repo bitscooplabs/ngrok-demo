@@ -37,21 +37,19 @@ Every request you make to the server will be logged.
 
 Notice the information you have available in the logs:
 
-**id**
-> A UUID4 assigned to the request. This helps determine which response correlated to which request. Typically requests will be fulfilled fast enough that their response is logged immediately after the request itself is, but it is possible to start processing additional requests before previous requests have finished.
+**id** &ndash; A UUID4 assigned to the request.
 
-**ip**
-> The IP of the request origin.
+This helps determine which response correlated to which request. Typically requests will be fulfilled fast enough that their response is logged immediately after the request itself is, but it is possible to start processing additional requests before previous requests have finished.
 
-**method**
-> The HTTP method used by the request.
+**ip** &ndash; The IP of the request origin.
 
-**path**
-> The specific resource requested on the server.
+**method** &ndash; The HTTP method used by the request.
 
-**headers**
-> A key/value list of headers that were submitted with the request. Note that NodeJS + Express will text transform all header names to lower case.
+**path** &ndash; The specific resource requested on the server.
 
-**parameters**
-> A key/value list of parameters that were submitted as query parameters.
+**headers** &ndash; A key/value list of headers that were submitted with the request.
+
+Note that NodeJS + Express will text transform all header names to lower case.
+
+**parameters** &ndash; A key/value list of parameters that were submitted as query parameters.
  
