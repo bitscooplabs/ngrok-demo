@@ -49,7 +49,11 @@ You can add the binary to your path and run it with:
 ngrok http 5858
 ```
 
-Which would expose a local HTTP application running on `http://localhost:5858` to an `ngrok.io` URL.
+<img src="https://d233zlhvpze22y.cloudfront.net/screenshots/demos/ngrok-demo/ngrok-boot.png" height="500px" />
+
+This will expose a local HTTP application running on `http://localhost:5858` to an `ngrok.io` URL (in this case `http(s):////d81d8eab.ngrok.io.`).
+That means that any request made to the ngrok URL will be processed by the ngrok servers and securely forwarded to your local application.
+Your application, in turn, will process the request, securely forward the response back to ngrok servers which will send the response back to the end-user who originally filed the request.
 
 Note that if you'd prefer to plain SSH remote port forwarding, you'd certainly be able to do so, but you'd need to adapt some of these instructions accordingly.
 Any instructions hereafter assume that you're working with ngrok.
