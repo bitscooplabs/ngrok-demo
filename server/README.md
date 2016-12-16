@@ -1,6 +1,7 @@
-# Local "Data Provider" Server
+# Local Data Provider Server
 
-This server
+This server is intended to serve up simple JSON responses and to let you see exactly what information the BitScoop API Toolbox is requesting as it interacts with a data provider.
+We'll be using this server as a basis for the tutorial steps in this repository coupled with ngrok to make the local application publically available (only while ngrok is running).
 
 
 ## Installing project requirements
