@@ -21,10 +21,37 @@ Once you're happy with the configuration you can boot the server with:
 node app.js
 ```
 
-You should see a boot message if everything worked and you'd be able to hit a URL like `http://localhost:5858/users`.
+You should see a boot message if everything worked.
 
-![](https://d233zlhvpze22y.cloudfront.net/screenshots/demos/ngrok-demo/server-boot.png)
+<img src="https://d233zlhvpze22y.cloudfront.net/screenshots/demos/ngrok-demo/server-boot.png" height="500px" />
+
+If the server is running you should be able to request resources from it, e.g.:
 
 ```
 curl -v localhost:5858/users
 ```
+
+Every request you make to the server will be logged.
+
+<img src="https://d233zlhvpze22y.cloudfront.net/screenshots/demos/ngrok-demo/test-request.png" height="500px" />
+
+Notice the information you have available in the logs:
+
+**id**
+> A UUID4 assigned to the request. This helps determine which response correlated to which request. Typically requests will be fulfilled fast enough that their response is logged immediately after the request itself is, but it is possible to start processing additional requests before previous requests have finished.
+
+**ip**
+> The IP of the request origin.
+
+**method**
+> The HTTP method used by the request.
+
+**path**
+> The specific resource requested on the server.
+
+**headers**
+> A key/value list of headers that were submitted with the request. Note that NodeJS + Express will text transform all header names to lower case.
+
+**parameters**
+> A key/value list of parameters that were submitted as query parameters.
+ 
