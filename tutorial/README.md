@@ -73,5 +73,21 @@ The environment may be dynamically updated in response to Postman calls you send
 ### Import and edit an environment
 
 We've created an environment that you'll want to import into your copy of Postman.
-You'll also need to set some variables.
+Click on the gear icon in the top right of the Postman window and then on "Manage Environments" to open the environment management modal.
 
+<img src="https://d233zlhvpze22y.cloudfront.net/screenshots/demos/ngrok-demo/manage-postman-environments-01.png" height="500px" />
+
+<img src="https://d233zlhvpze22y.cloudfront.net/screenshots/demos/ngrok-demo/manage-postman-environments-02.png" height="500px" />
+
+Go ahead and click on "Import" to load up the environment included in this folder.
+If you'd prefer to set the variables manually, you can certainly do so, just make sure not to misspell any of the variable names.
+
+<img src="https://d233zlhvpze22y.cloudfront.net/screenshots/demos/ngrok-demo/manage-postman-environments-03.png" height="500px" />
+
+Fill in the values for your ngrok URL (obtainable from the ngrok window), localhost port (5858 or whatever you picked), and API key.
+If you still need to create an API key, head to [https://developer.bitscoop.com/keys](https://developer.bitscoop.com/keys), create an API key, and copy in the token.
+
+The individual collections will be importable from each tutorial step.
+When you import a collection you'll see a window giving you choice on how to import the collection.
+
+<img src="https://d233zlhvpze22y.cloudfront.net/screenshots/demos/ngrok-demo/import-postman-collection.png" height="500px" />
