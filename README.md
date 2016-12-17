@@ -33,8 +33,14 @@ If you get version numbers for both, then you're in business.
 ### git
 
 You don't technically need Git installed to finish this demo, as you can download and extract the bundled files directly from GitHub.
-However the instructions here will assume that you're running with Git.
 If you're on Windows or MacOS you can install [Sourcetree](https://www.sourcetreeapp.com/) published by Atlassian, which comes with an embedded Git binary.
+
+Either way you'll want to clone this repository.
+With git on the command line you'd run:
+
+```
+git clone https://github.com/bitscooplabs/ngrok-demo.git
+```
 
 ### ngrok
 
@@ -43,17 +49,12 @@ If you're familiar with SSH remote port forwarding, this concept probably won't 
 However the advantage of ngrok over plain SSH forwarding is the automatic provisioning of the public URLs and the fact that you don't need to configure any infrastructure yourself.
 
 ngrok is a simple binary that you can download from [https://ngrok.com/download](https://ngrok.com/download).
-You can add the binary to your path and run it with:
+Make sure you add the binary to the path.
+You can test to see if everything is working by running:
 
 ```
-ngrok http 5858
+ngrok --version
 ```
-
-<img src="https://d233zlhvpze22y.cloudfront.net/screenshots/demos/ngrok-demo/ngrok-boot.png" height="500px" />
-
-This will expose a local HTTP application running on `http://localhost:5858` to an `ngrok.io` URL (in this case `http(s):////d81d8eab.ngrok.io.`).
-That means that any request made to the ngrok URL will be processed by the ngrok servers and securely forwarded to your local application.
-Your application, in turn, will process the request, securely forward the response back to ngrok servers which will send the response back to the end-user who originally filed the request.
 
 Note that if you'd prefer to plain SSH remote port forwarding, you'd certainly be able to do so, but you'd need to adapt some of these instructions accordingly.
 Any instructions hereafter assume that you're working with ngrok.
@@ -83,22 +84,6 @@ cd server
 npm install
 ```
 
-The server is configured to use port 5858 by default.
-If you want to use a different port you can change the default value by editing the address in `config/default.json`.
-Once you're happy with the configuration you can boot the server with:
-
-```
-node app.js
-```
-
-You should see a boot message if everything worked and you'd be able to hit a URL like `http://localhost:5858/users`.
-
-```
-curl -v localhost:5858/users
-```
-
-Feel free to peruse the server code, but know that the way in which instance responses (e.g. `http://localhost:5858/users/1`) are prepared isn't particularly efficient and shouldn't be used as an example (generally you'd be using a database anyway, so it's a moot point).
-
 
 ## Get logged into BitScoop
 
@@ -109,13 +94,6 @@ The wait isn't prohibitive, for the time being we just want to send you an email
 
 Once you're logged in, head to the API Toolbox at [https://developer.bitscoop.com](https://developer.bitscoop.com).
 
-You'll need an API Key to send requests to the API Toolbox, so go ahead and create one at [https://developer.bitscoop.com/keys](https://developer.bitscoop.com/keys).
-The generated token will need to be added to every request in an authorization header.
-
-```
-Authorization: Bearer [APIKeyToken]
-```
-
 
 ## Diving into Provider Maps
 
@@ -123,15 +101,7 @@ Within the BitScoop API Toolbox, a Provider Map is a JSON configuration that con
 We've put together a few steps that we want to take you through to build up a Provider Map that interacts with your local development data provider.
 Finally we wanted to send you off with a real world example of how you might use BitScoop to power a GitHub application.
 
-We've broken apart the tutorial steps so that this README didn't get prohibitivly (or uninterestingly) long.
+We've broken apart the tutorial steps so that this README didn't get prohibitively (or uninterestingly) long.
 While you don't necessarily need to do the steps in order, the content therein has been written with that assumption.
 
-Check out all the steps here: [https://github.com/bitscooplabs/ngrok-demo/tutorial](https://github.com/bitscooplabs/ngrok-demo/tree/master/tutorial).
-
-Or you can jump to a specific step:
-
-  1. [Basic Example](https://github.com/bitscooplabs/ngrok-demo/blob/master/tutorial/0001-basic-example.md)
-  2. [Models for Parsing Data](https://github.com/bitscooplabs/ngrok-demo/blob/master/tutorial/0002-models-for-parsing-data.md)
-  3. [Adding Relations & Hydration](https://github.com/bitscooplabs/ngrok-demo/blob/master/tutorial/0003-adding-relations-and-hydration.md)
-  4. [Handling Basic Authentication](https://github.com/bitscooplabs/ngrok-demo/blob/master/tutorial/0004-handling-basic-authentication.md)
-  5. [Real World Example (GitHub app)](https://github.com/bitscooplabs/ngrok-demo/blob/master/tutorial/0005-real-world-example.md)
+Check out the tutorial here: [https://github.com/bitscooplabs/ngrok-demo/tutorial](https://github.com/bitscooplabs/ngrok-demo/tree/master/tutorial).
