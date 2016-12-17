@@ -23,15 +23,26 @@ The local mock "data provider" server included in this repository is configured 
 If you want to use a different port you can change the default value by editing the address in `config/default.json`.
 Once you're happy with the configuration you can boot the server with:
 
+If you want to use a different port you can change the default value by editing the address in `config/default.json`.
+Once you're happy with the configuration you can boot the server with:
+
 ```
 node app.js
 ```
 
-You should see a boot message if everything worked and you'd be able to hit a URL like `http://localhost:5858/users`.
+You should see a boot message if everything worked.
+
+<img src="https://d233zlhvpze22y.cloudfront.net/screenshots/demos/ngrok-demo/server-boot.png" height="500px" />
+
+If the server is running you should be able to request resources from it, e.g.:
 
 ```
 curl -v localhost:5858/users
 ```
+
+Every request you make to the server will be logged.
+
+<img src="https://d233zlhvpze22y.cloudfront.net/screenshots/demos/ngrok-demo/test-request.png" height="500px" />
 
 Feel free to peruse the server code, but know that the way in which instance responses (e.g. `http://localhost:5858/users/1`) are prepared isn't particularly efficient and shouldn't be used as an example (generally you'd be using a database anyway, so it's a moot point).
 
