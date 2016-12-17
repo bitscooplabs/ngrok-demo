@@ -65,3 +65,13 @@ Your application, in turn, will process the request, securely forward the respon
 
 ## Set up Postman
 
+The Postman portion of this demo requires you to set up an environment and import some collections we've made.
+
+An environment is simply a list of key/values that can be referenced by Postman calls.
+The environment may be dynamically updated in response to Postman calls you send.
+
+### Import and edit an environment
+
+We've created an environment that you'll want to import into your copy of Postman.
+You'll also need to set some variables.
+
