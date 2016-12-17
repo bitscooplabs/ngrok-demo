@@ -49,11 +49,19 @@ Feel free to peruse the server code, but know that the way in which instance res
 
 ## Start ngrok
 
+Once you have your local server running you can temporarily publish it to the internet with ngrok.
+
+```
+ngrok http 5858
+```
+
 <img src="https://d233zlhvpze22y.cloudfront.net/screenshots/demos/ngrok-demo/ngrok-boot.png" height="500px" />
 
-This will expose a local HTTP application running on `http://localhost:5858` to an `ngrok.io` URL (in this case `http(s):////d81d8eab.ngrok.io.`).
-That means that any request made to the ngrok URL will be processed by the ngrok servers and securely forwarded to your local application.
-Your application, in turn, will process the request, securely forward the response back to ngrok servers which will send the response back to the end-user who originally filed the request.
+This will expose your local HTTP application running on `http://localhost:5858` to an `ngrok.io` URL (in this case `http(s)://d81d8eab.ngrok.io.`).
+
+Any request made to the assigned ngrok URL will be processed by the ngrok servers and securely forwarded to your local application.
+Your application, in turn, will process the request, securely forward the response back to ngrok servers which will send the response back to the end-user who originally requested the resource.
 
 
 ## Set up Postman
+
