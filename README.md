@@ -33,14 +33,8 @@ If you get version numbers for both, then you're in business.
 ### git
 
 You don't technically need Git installed to finish this demo, as you can download and extract the bundled files directly from GitHub.
+However the instructions here will assume that you're running with Git.
 If you're on Windows or MacOS you can install [Sourcetree](https://www.sourcetreeapp.com/) published by Atlassian, which comes with an embedded Git binary.
-
-Either way you'll want to clone this repository.
-With git on the command line you'd run:
-
-```
-git clone https://github.com/bitscooplabs/ngrok-demo.git
-```
 
 ### ngrok
 
