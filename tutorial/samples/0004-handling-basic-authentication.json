@@ -14,6 +14,7 @@
   "endpoints": {
     "Posts": {
       "route": "/posts",
+      "populate": "*",
       "single": {
         "route": "/posts/{{ identifier }}"
       },
