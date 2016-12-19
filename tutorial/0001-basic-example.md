@@ -64,24 +64,28 @@ The context is used to evaluate this route at runtime ultimately resulting in an
 You'll want to run the imported Postman calls in order.
 You should be able to view every request that comes into your local server.
 
-### Native Posts Collection
-This call will send a GET request directly to the url `http://localhost:5858/posts`.
-You should be able to see the result that you'd get directly from the data provider without any modification.
-
-### Native Users Collection
-Similarly, this call will send a GET request directly to the url `http://localhost:5858/users` to give you an idea of what the user data looks like inherently.
-
-### Ngrok Posts Collection
-This call will send a GET request to the `/posts` collection on the ngrok URL which should in turn directly forward the request to your local application.
-You shouldn't notice any difference in the returned data, but you will notice an increased latency.
-This is to be expected since you're adding a few extra steps to network path.
-
 ### Create BitScoop Provider Map
 This call will send a POST request to the BitScoop API Toolbox and configure a Provider Map automatically using roughly the configuration above (the `url` will be different).
+The ID of the Provider Map will be saved to your environment automatically.
 
-### Mapped Posts Collection
-This call will send a GET request to the dynamically provisioned BitScoop Data API endpoint `https://provider.api.bitscoop.com/[ProviderMapID]/Posts`.
+### Native Calls
+These calls will send GET requests directly to your local application.
+You should be able to see the result that you'd get directly from the data provider without any modification.
+
+### Ngrok Calls
+Similarly, these calls will send GET requests directly to your provisioned ngrok server to give you an idea of what sort of information ngrok logs.
+You should also see evidence of any call 1:1 in your local application.
+
+### BitScoop Calls
+These calls will send GET requests to the various dynamically provisioned BitScoop Data API endpoints:
+
+```
+https://provider.api.bitscoop.com/[ProviderMapID]/[EndpointName]`
+https://provider.api.bitscoop.com/[ProviderMapID]/[EndpointName]/[Identifier]`
+```
+
 Since we haven't done anything particularly interesting with our endpoint configurations, the data returned will be exactly the same as the previous results.
+You should see evidence of any call in your local application and in the ngrok process window.
 
 
 ## Recap
