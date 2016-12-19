@@ -74,6 +74,9 @@ This will result a string like `"John Doe" <jdoe@example.com>` to be automatical
 }
 ```
 
+Additional field types are available (such as `integer`, `float`, and `date`) to help you normalize irregular data that may come from various data providers.
+
+
 ## Postman Calls
 
 You'll want to run the imported Postman calls in order.
