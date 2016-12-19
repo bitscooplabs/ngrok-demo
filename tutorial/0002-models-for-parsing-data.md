@@ -5,7 +5,7 @@ The exact data that we'd receive from the localhost application is available thr
 
 In this step of the tutorial we're going to be applying some simple data transformations to what the data provider returns.
 
-In order to parse information Provider Maps rely on configuring a "model" on a particular endpoint.
+Provider Maps rely on configuring a "model" on a particular endpoint in order to parse information.
 Models allow you to describe how you'd like your data to be returned.
 While we're not going to cover everything you're able to do with models here, we will give you a few basic ideas.
 
@@ -17,7 +17,7 @@ To grab a copy of the collection we'll be using for this example click the butto
 ## Provider Map
 
 The Provider Map configuration we'll be using for this example is fundamentally the same as before, but has a couple of important new features.
-Note that you don't need to worry about copy and pasting it into the BitScoop API Toolbox or Postman, we've already included it in the body of the POST request to create a new Provider Map.
+Note that you don't need to worry about copy and pasting it into the BitScoop API Toolbox or Postman, as we've already included it in the body of the POST request to create a new Provider Map.
 
 ```json
 {
@@ -60,10 +60,10 @@ Note that you don't need to worry about copy and pasting it into the BitScoop AP
 
 We've added a `model` configuration to both the `Posts` endpoint and the `Users` endpoint.
 
-The `Posts` model effectively filters the `body` field from the original data.
-So if you were uninterested in extraneous data returned from a data provider you could drastically reduce the amount of data consumed by your infrastructure.
+The `Posts` model effectively filters the `body` field from the original data, only returning the fields that are listed.
+If you were uninterested in extraneous data returned from a data provider you could drastically reduce the amount of data consumed by your infrastructure.
 
-The `Users` model filters certain field and additionally introduces the idea of parsing data.
+The `Users` model filters certain fields and additionally introduces the idea of parsing data.
 The `email` data returned from your local data provider is a string, but the our Provider Map is configured to parse it as an email address.
 This will result a string like `"John Doe" <jdoe@example.com>` to be automatically parsed into an email object such as:
 

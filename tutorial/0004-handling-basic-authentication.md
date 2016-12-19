@@ -6,7 +6,7 @@ This obviously isn't always the case, but the BitScoop API Toolbox gives you som
 In this step of the tutorial, we're simply going to add an environment and a few global headers.
 When you create a Provider Map you're able to create a simple key/value environment with variables that will be available on the context.
 You're also able to add headers and parameters that will be sent to the data provider on every request.
-Note that if you'd prefer more granularity when sending headers and parameters, you can specify these same options on the endpoint configurations of the `single` and `collection` subsections of endpoint configurations.
+Note that if you'd prefer more granularity when sending headers and parameters, you can specify these same options on the endpoint configurations and/or the `single` and `collection` subsections of endpoint configurations.
 The most specific value will always take precedence.
 
 To grab a copy of the collection we'll be using for this example click the button below.
@@ -86,7 +86,7 @@ Authorization: Bearer 12345
 X-Foo: Bar
 ```
 
-Note that Express + NodeJS will text transform the header values to lower case, so we'll notice the raw values parsed as `authorization` and `x-foo`, respectively.
+Note that Express + NodeJS will text transform the header values to lower case, so we'll see the raw values parsed as `authorization` and `x-foo`, respectively.
 This isn't a bug in the BitScoop API Toolbox.
 
 In this simple case we've created a reference to the environment variable `api_key` on the authorization header value.

@@ -1,16 +1,16 @@
 # BitScoop API Toolbox Intro
 
-This demo is a quick tour of how to configure the BitScoop API Toolbox to interact with "data providers," such as Facebook, Twitter, and GitHub, and the APIs they publish.
+This demo is a quick tour of how to configure the BitScoop API Toolbox to interact with "data providers" such as Facebook, Twitter, and GitHub, and the APIs they publish.
 As part of this demo, we'll be running our own mock "data provider," which will give you an opportunity to view the requests that the BitScoop API Toolbox makes in real time and in more granular detail.
-So you'll need to run the local server and temporarily publish it so that it's available publically and the API Toolbox can reach it.
+You'll need to run the local server and temporarily publish it so that it's available publically and the API Toolbox can reach it.
 
 We'll be using a few key technologies that you'll want to familiarize yourself with before we get started.
 Please note that while we use these external technologies ourselves, we CANNOT OFFICIALLY ENDORSE THEM NOR BE HELD RESPONSIBLE for any issues with respect to security, etc. that you may encouter while using them.
 
 Be sure to verify your downloads whenever possible using checksums or signatures to ensure their authenticity and origin especially if you're working with sensitive information.
 
-After getting set up with these technologies, we'll walk you though creating a Provider Map on the BitScoop API Toolbox building up an example step-by-step.
-Finally we'll direct you to a more practical Provider Map that deals with a 3-legged authentication workflow.
+After getting set up with these technologies, we'll walk you though creating a Provider Map on the BitScoop API Toolbox and will build up an example step-by-step.
+Finally, we'll direct you to a more practical Provider Map that deals with a 3-legged authentication workflow.
 
 
 ## First things first, pre-requisites!
@@ -19,7 +19,7 @@ Finally we'll direct you to a more practical Provider Map that deals with a 3-le
 
 The mock data provider is written in Express on top of NodeJS.
 You'll need to install NodeJS if you don't have it already.
-You can find the most latest versions here [https://nodejs.org/en/download](https://nodejs.org/en/download).
+You can find the latest versions here [https://nodejs.org/en/download](https://nodejs.org/en/download).
 The installation instructions for each platform are out of scope of these instructions, but you'll generally want to make sure that the `node` and `npm` (bundled with NodeJS) executables are on your path.
 You can test to see if everything is working by running:
 
@@ -55,7 +55,7 @@ Any instructions hereafter assume that you're working with ngrok.
 
 ### Postman
 
-Postman is Chrome app that lets you construct detailed HTTP requests and easily read and understand the responses.
+Postman is a Chrome app that lets you construct detailed HTTP requests and easily read and understand the responses.
 Think of it as an interactive `curl` for humans. That said, if you want to use `curl` we won't stop you!
 
 If you have Chrome installed you'll want to grab Postman from the [Chrome store page](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop).
@@ -68,7 +68,7 @@ You'll want a local copy of this repository.
 There are clone instructions right on GitHub, but generally just run:
 
 ```
-git clone https://github.com/bitscooplabs/ngrok-demo
+git clone https://github.com/bitscooplabs/api-toolbox-intro
 ```
 
 Once you have the code locally change directory into the server directory and install the project requirements with `npm`.

@@ -1,14 +1,14 @@
 # Adding Relations and Hydration
 
-We've thus far introduced a way to interact with data providers dynamically provision endpoints on the BitScoop Data API using Provider Maps.
+We've thus far introduced a way to interact with data providers via dynamically provisioned endpoints on the BitScoop Data API using Provider Maps.
 We've also configured a few models on these endpoints to affect how the data is parsed before it is returned to your applications.
 In this step of the tutorial we're going to introduce how you might start to describe relationships in your data and some features of the BitScoop API Toolbox that will help you reduce the number of calls you make to data providers.
 
-When you're dealing with relational databases you often times have the convenience of creating relationships in your data model.
+When you're dealing with relational databases, you often have the convenience of creating relationships in your data model.
 Many Object-relational mapping (ORM) solutions are availble for various languages that drastically simplify the process of returning and processing data.
 
 When you're working with an API, it is rare that the data provider will stipulate any relationships in the the resources available to you.
-Instead you're often times tasked in your application to keep track of data relationships on the code level.
+Instead you're often tasked in your application to keep track of data relationships on the code level.
 This can result in complex solutions intended to reuse data where possible or a disproportionally large number of requests sent to the data provider.
 
 In this step of the tutorial, we're going to describe a simple relationship between `posts` and `users` and explain how to work with this relationship using the BitScoop API Toolbox.
@@ -83,7 +83,7 @@ The `Users` endpoint, in turn, understands that it should request information us
 We've added a `populate` setting to the `Posts` endpoint so that any call to it will automatically hydrate the individual posts that it processes.
 Note that this value can be overridden by submitting an `X-Populate` HTTP header directive.
 The literal value `*` indicates that the population dependency tree should be automatically calculated by the BitScoop API Toolbox.
-So if you were to have a relationship defined on the `Users` endpoint, the `*` would result in that relationship being hydrated as well.
+If you were to have a relationship defined on the `Users` endpoint, the `*` would result in that relationship being hydrated as well.
 
 The final result is only returned to your application when all of the requests are finished.
 This can sometimes result in a perceived latency, however keep in mind that based on your configuration there might be thousands of requests made on your behalf by the BitScoop API Toolbox.

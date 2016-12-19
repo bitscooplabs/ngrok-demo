@@ -10,7 +10,7 @@ To grab a copy of the collection we'll be using for this example click the butto
 ## Provider Map
 
 The Provider Map configuration we'll be using for this example has a couple of important features.
-Note that you don't need to worry about copy and pasting it into the BitScoop API Toolbox or Postman, we've already included it in the body of the POST request to create a new Provider Map.
+Note that you don't need to worry about copy and pasting it into the BitScoop API Toolbox or Postman, as we've already included it in the body of the POST request to create a new Provider Map.
 
 ```json
 {

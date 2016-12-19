@@ -88,6 +88,6 @@ Fill in the values for your ngrok URL (obtainable from the ngrok window), localh
 If you still need to create an API key, head to [https://developer.bitscoop.com/keys](https://developer.bitscoop.com/keys), create an API key, and copy in the token.
 
 The individual collections will be importable from each tutorial step.
-When you import a collection you'll see a window giving you choice on how to import the collection.
+When you import a collection you'll see a window giving you a choice on how to import the collection.
 
 <img src="https://d233zlhvpze22y.cloudfront.net/screenshots/demos/ngrok-demo/import-postman-collection.png" height="500px" />

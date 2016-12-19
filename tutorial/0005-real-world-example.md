@@ -5,7 +5,7 @@ While our simple examples (hopefully) clearly illustrate the fundamentals, as a 
 Perhaps the most common of these situations is dealing with 3-legged authentication workflows.
 
 The specific discussion of how 3-legged authentication (e.g. OpenID, OAuth1/2, etc.) works is somewhat out of scope of this tutorial step.
-However generally 3-legged authentication workflows require permission grants from your end user to access their data in a data provider's system.
+Generally, 3-legged authentication workflows require permission grants from your end user to access their data in a data provider's system.
 You typically receive some sort of identifiying token that you use to sign every request you make to a data provider that not only authenticates your application, but also indicates what user you're interacting on behalf of.
 Keeping track of these tokens can be somewhat tedious and irregular.
 
@@ -15,7 +15,7 @@ We'll be using a GitHub application as a sample app, so you'll want to create an
 [https://github.com/settings/applications/new](https://github.com/settings/applications/new)
 
 You don't have an authorization callback URL provisioned for your in the BitScoop Auth API yet because we haven't created a Provider Map for this step.
-However you can fill in a placeholder URL for the "Authorization callback URL" in your GitHub app.
+However, you can fill in a placeholder URL for the "Authorization callback URL" in your GitHub app.
 We'll be sure to update it later.
 Once you create your GitHub App, you should have access to the "Client ID" and "Client Secret" values.
 You'll need these set in your Postman environment to complete this tutorial step.
@@ -25,7 +25,7 @@ To grab a copy of the collection we'll be using for this example click the butto
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/c7a19e9070e2e86a7b26)
 
 The practical difference between dealing with our previous examples and this one is that we'll be creating Connections on the BitScoop API Toolbox to our GitHub app.
-A Connection in the BitScoop system holds all the authentication details pertinant to your end users in the 3-legged authentication workflow.
+A Connection in the BitScoop system holds all the authentication details pertinent to your end users in the 3-legged authentication workflow.
 Instead of sending up any sort of request token to the data provider directly, you'll submit an additional header to the BitScoop Data API indicating which connection you'd like information for.
 
 The typical workflow you'd send your users through is straightforward.
@@ -38,8 +38,8 @@ After your end-user is redirected to the returned `redirect_url` they take a few
 
   1. They're given the opportunity to grant your application permission to read their data.
   2. After doing so the data provider will redirect them to a URL that you set.
-     Remember the "Authorization callback URL" from before? 
-     If you're using the BitScoop API Toolbox, you'll have an callback URL provisioned for you automatically on the Auth API: `https://auth.api.bitscoop.com/done/[ProviderID]`.
+     Remember the "Authorization callback URL" from before?
+     If you're using the BitScoop API Toolbox, you'll have a callback URL provisioned for you automatically on the Auth API: `https://auth.api.bitscoop.com/done/[ProviderID]`.
   4. The BitScoop API Toolbox will handle completing the Connection you initially created.
   5. The BitScoop API Toolbox will finally redirect your end-user to a `redirect_url` you specify in the Provider Map and hand control of their user experience back to you.
 
@@ -114,7 +114,7 @@ Of particular note is the `signature` setting which specifies that any authentic
 You'd need to peruse the documentation of individual data providers to get an idea of what settings to use for `authorization_url`, `access_token`, `signature`, etc.
 
 An API leveraging a 3-legged authentication workflow will often make some information available about the user associated with a particular request token.
-This "metainformation" typically includes a ID of the user in the data provider's system, the username, the full name, email, etc.
+This "metainformation" typically includes an ID of the user in the data provider's system, the username, the full name, email, etc.
 The optional `meta` configuration specifies where such metainformation about the Connection can be obtained after it is completed.
 As part of the Connection completion process this information will be obtained automatically if configured.
 
@@ -137,7 +137,7 @@ This allows you to specifically indicate which scopes are necessary for which en
 ## Postman Calls
 
 You'll want to run the imported Postman calls in order.
-However before running any calls remember to set some additional variables in your Postman environment.
+However, before running any calls remember to set some additional variables in your Postman environment.
 
 ```
 github_client_id: [ClientID]
@@ -167,7 +167,7 @@ The returned data will look something like:
 Remember the `id` value is the ID of the newly created Connection.
 If you're working with the BitScoop API Toolbox inside one of your applications, you'll need to save a reference to this ID somewhere.
 You can always get the list of all your current connections for a particular Provider Map.
-However if you want to, for example, associate a Connection with a particular user of your system you'll need to set that somewhere.
+However if you want to, for example, associate a Connection with a particular user of your system, you'll need to set that somewhere.
 In this case the Connection ID is saved automatically as a Postman environment variable and used for the "Repos Collection" call.
 
 The `redirect_url` is the location where you should programmatically redirect the end-user interacting with your system.
