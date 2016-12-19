@@ -80,8 +80,8 @@ You should also see evidence of any call 1:1 in your local application.
 These calls will send GET requests to the various dynamically provisioned BitScoop Data API endpoints:
 
 ```
-https://provider.api.bitscoop.com/[ProviderMapID]/[EndpointName]`
-https://provider.api.bitscoop.com/[ProviderMapID]/[EndpointName]/[Identifier]`
+https://provider.api.bitscoop.com/[ProviderMapID]/[EndpointName]
+https://provider.api.bitscoop.com/[ProviderMapID]/[EndpointName]/[Identifier]
 ```
 
 Since we haven't done anything particularly interesting with our endpoint configurations, the data returned will be exactly the same as the previous results.
