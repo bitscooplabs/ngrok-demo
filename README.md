@@ -1,4 +1,4 @@
-# ngrok-demo
+# BitScoop API Toolbox Intro
 
 This demo is a quick tour of how to configure the BitScoop API Toolbox to interact with "data providers," such as Facebook, Twitter, and GitHub, and the APIs they publish.
 As part of this demo, we'll be running our own mock "data provider," which will give you an opportunity to view the requests that the BitScoop API Toolbox makes in real time and in more granular detail.
